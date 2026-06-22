@@ -1,0 +1,20 @@
+{
+  "_note": "라이브 검증 샘플 (rte_id=31001122, opr_ymd=20260101, users_type_cd=01, ride_ctpv_cd=31). 전체 totalCount=54 중 15건. 2026-06-15 resultCode 200 SUCCESS.",
+  "items": [
+    {"ride_dt":"20260101173209","ride_sttn_id":"3101480","goff_dt":"20260101173606","goff_sttn_id":"3100144","utztn_nope":1,"utztn_dstnc":1533,"brdg_hr":237,"trnf_cnt":0},
+    {"ride_dt":"20260101171107","ride_sttn_id":"3101442","goff_dt":"20260101171249","goff_sttn_id":"3101441","utztn_nope":1,"utztn_dstnc":1338,"brdg_hr":102,"trnf_cnt":0},
+    {"ride_dt":"20260101185200","ride_sttn_id":"3102956","goff_dt":"20260101191827","goff_sttn_id":"3101267","utztn_nope":1,"utztn_dstnc":10629,"brdg_hr":1587,"trnf_cnt":0},
+    {"ride_dt":"20260101173950","ride_sttn_id":"3101446","goff_dt":"20260101180730","goff_sttn_id":"3100439","utztn_nope":1,"utztn_dstnc":7163,"brdg_hr":1660,"trnf_cnt":0},
+    {"ride_dt":"20260101203851","ride_sttn_id":"3103884","goff_dt":"20260101204346","goff_sttn_id":"3101002","utztn_nope":1,"utztn_dstnc":2511,"brdg_hr":295,"trnf_cnt":0},
+    {"ride_dt":"20260101173133","ride_sttn_id":"3100998","goff_dt":"20260101180512","goff_sttn_id":"3101480","utztn_nope":1,"utztn_dstnc":12314,"brdg_hr":2019,"trnf_cnt":0},
+    {"ride_dt":"20260101185200","ride_sttn_id":"3102956","goff_dt":"20260101191827","goff_sttn_id":"3101267","utztn_nope":1,"utztn_dstnc":10629,"brdg_hr":1587,"trnf_cnt":0},
+    {"ride_dt":"20260101154009","ride_sttn_id":"3101267","goff_dt":"20260101160644","goff_sttn_id":"3101482","utztn_nope":1,"utztn_dstnc":12211,"brdg_hr":1595,"trnf_cnt":0},
+    {"ride_dt":"20260101114542","ride_sttn_id":"3101267","goff_dt":"20260101121205","goff_sttn_id":"3101482","utztn_nope":1,"utztn_dstnc":12211,"brdg_hr":1583,"trnf_cnt":0},
+    {"ride_dt":"20260101163259","ride_sttn_id":"3100998","goff_dt":"20260101171037","goff_sttn_id":"3101480","utztn_nope":1,"utztn_dstnc":12314,"brdg_hr":2258,"trnf_cnt":0},
+    {"ride_dt":"20260101091719","ride_sttn_id":"3103809","goff_dt":"20260101092415","goff_sttn_id":"3101002","utztn_nope":1,"utztn_dstnc":1929,"brdg_hr":416,"trnf_cnt":0},
+    {"ride_dt":"20260101102850","ride_sttn_id":"3100814","goff_dt":"20260101103615","goff_sttn_id":"3101005","utztn_nope":1,"utztn_dstnc":3975,"brdg_hr":445,"trnf_cnt":0},
+    {"ride_dt":"20260101140458","ride_sttn_id":"3100144","goff_dt":"20260101141927","goff_sttn_id":"3101441","utztn_nope":1,"utztn_dstnc":2837,"brdg_hr":869,"trnf_cnt":0},
+    {"ride_dt":"20260101100642","ride_sttn_id":"3101445","goff_dt":"20260101101622","goff_sttn_id":"3101440","utztn_nope":1,"utztn_dstnc":3775,"brdg_hr":580,"trnf_cnt":0},
+    {"ride_dt":"20260101222318","ride_sttn_id":"3101483","goff_dt":"20260101222746","goff_sttn_id":"3101482","utztn_nope":1,"utztn_dstnc":3392,"brdg_hr":268,"trnf_cnt":0}
+  ]
+}

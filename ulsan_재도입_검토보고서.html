@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>울산 폐지노선(123·126·307) 재도입 검토 보고서</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(160deg,#0a1430,#0c1838 60%,#0a1226);color:#eaf0ff;font-family:'Apple SD Gothic Neo',system-ui,sans-serif;line-height:1.75}
+.wrap{max-width:900px;margin:0 auto;padding:40px 24px 90px}
+a{color:#7fb4ff}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:#9fb0d8;font-size:14px;margin:2px 0}
+.tag{display:inline-block;background:#3a7bd522;border:1px solid #42a5f5;border-radius:6px;padding:2px 9px;font-size:11.5px;margin-top:8px}
+h2{font-size:19px;margin:42px 0 6px;padding-bottom:7px;border-bottom:2px solid #ffd54f55;display:flex;gap:9px;align-items:center}
+h2 .n{background:#ffd54f;color:#10131c;border-radius:7px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex:0 0 auto}
+h3{font-size:15.5px;margin:24px 0 6px;color:#cfe0ff}
+p{margin:10px 0;font-size:14px;color:#dde6ff}
+.muted{color:#9fb0d8;font-size:13px}
+figure{margin:18px 0;background:#0e1733;border:1px solid #ffffff1f;border-radius:12px;padding:12px}
+figure img{width:100%;border-radius:7px;display:block}
+figcaption{color:#9fb0d8;font-size:12px;margin-top:8px;text-align:center}
+.box{background:#121d3f;border:1px solid #ffffff1f;border-left:4px solid #5a8bff;border-radius:10px;padding:13px 16px;margin:16px 0}
+.box.q{border-left-color:#ffd54f}
+.box.warn{border-left-color:#ff8c1e}
+.box.easy{border-left-color:#2ecc71;background:#102420}
+.box.easy h4{color:#7ee0a8}
+.gloss{background:#0e1733;border:1px solid #ffffff1f;border-radius:12px;padding:14px 18px;margin:16px 0}
+.gloss h4{margin:0 0 8px;font-size:14.5px;color:#cfe0ff}
+.gloss dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;margin:0;font-size:13.5px}
+.gloss dt{color:#ffd54f;font-weight:700;white-space:nowrap}
+.gloss dd{margin:0;color:#dde6ff}
+.box h4{margin:0 0 6px;font-size:14.5px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+th,td{border:1px solid #ffffff1f;padding:7px 10px;text-align:left}
+th{background:#16224a;color:#cfe0ff}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.key{color:#ffd54f;font-weight:700}
+ul{font-size:14px;color:#dde6ff}li{margin:5px 0}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{background:#16224a;border:1px solid #ffffff1f;border-radius:8px;padding:6px 12px;font-size:13px;text-decoration:none;color:#cfe0ff}
+.links a:hover{background:#22305f}
+footer{margin-top:50px;border-top:1px solid #ffffff1f;padding-top:18px;color:#6c7aa6;font-size:12px}
+</style></head><body><div class="wrap">
+
+<h1>울산 폐지노선(123·126·307) 재도입 검토 보고서</h1>
+<p class="sub">교통카드 합성데이터 · BIS 실노선 · 국토부 노선별 차내 재차/혼잡도 · SGIS 인구 기반 분석</p>
+<p class="sub">분석 기준일 2026-04-07(화) · 본 보고서는 단일일자·표본·가정값 기반 <b>방향성·우선순위 추정</b>입니다.</p>
+<span class="tag">데이터 검증 보고서</span>
+
+<div class="box easy"><h4>💡 이 보고서는 무엇인가요?</h4>
+<p style="margin:6px 0 0">울산시가 예전에 없앴다가 다시 살리려는 버스 3개 노선(<b>123·126·307번</b>)이 정말 필요한지, 살리면 무엇이 좋아지는지를 <b>실제 교통카드 이용 기록</b>으로 따져본 자료입니다. 전문 용어가 나오면 아래 <b>용어 풀이</b>를 참고하세요. 각 장 끝에는 <b>"쉽게 말하면"</b> 요약을 달았습니다.</p></div>
+
+<div class="gloss"><h4>📖 용어 풀이 (먼저 보면 편해요)</h4>
+<dl>
+<dt>차내 재차 (재차)</dt><dd>버스 안에 타고 있는 사람 수.</dd>
+<dt>정원 · 만차</dt><dd>버스가 적정하게 태울 수 있는 인원. 그 인원을 다 채우면(100%) '만차'.</dd>
+<dt>OD</dt><dd>어디서 타서(출발) 어디서 내렸는지(도착)를 묶은 통행 정보.</dd>
+<dt>환승 · 환승율</dt><dd>한 번에 못 가서 버스를 갈아타는 것. 갈아탄 통행의 비율이 환승율.</dd>
+<dt>직결</dt><dd>갈아타지 않고 한 번에 목적지까지 가는 것.</dd>
+<dt>간선 · 코리더</dt><dd>큰 도로를 길게 다니는 주요 노선(간선)과 그 노선들이 지나는 같은 길(코리더).</dd>
+<dt>인가대수</dt><dd>그 노선에 배정된 버스 대수.</dd>
+<dt>효율 (명/대)</dt><dd>버스 한 대가 끌어오는 승객 수. 클수록 적은 차로 많이 태운다는 뜻.</dd>
+<dt>표본</dt><dd>전체가 아닌 일부 샘플. 그래서 절대 숫자보다 '노선 간 비교·패턴'으로 봐야 함.</dd>
+</dl></div>
+
+<h2><span class="n">0</span>요약</h2>
+<div class="box">
+<p>울산시는 노선 개편 민원에 대응해 폐지된 <b>123·126·307</b> 3개 노선 복원을 검토 중이며, 증차(약 15대)와 추경·시의회 협조가 변수로 거론된다. 본 보고서는 이 검토안을 보유 데이터로 점검했다.</p>
+<ul>
+<li><b>연결성·출퇴근 수요·동구 영향</b> 주장은 데이터로 뒷받침된다.</li>
+<li>통행량·효율 기준 재도입 <span class="key">우선순위는 307 ≫ 123 ≫ 126</span>으로, 기사에서 먼저 거론된 126은 셋 중 수요가 가장 작다.</li>
+<li>재도입이 이용을 가져오는 기존 노선들은 <b>이미 이용이 몰리는 시간대에 혼잡(재차 49~58)</b>한 간선이라, 이용 감소는 손실이 아니라 <span class="key">혼잡 완화(분산)</span>에 가깝다.</li>
+<li>재도입 직결이 흡수하는 통행의 <span class="key">17.7%가 현재 환승 통행</span>(전체 평균 4.8%의 약 3.6배) → 환승 해소·이용편의 개선 효과가 뚜렷하다.</li>
+</ul>
+</div>
+
+<h2><span class="n">1</span>울산의 지역적 특징과 이동 방향성</h2>
+<p>울산 통행은 <b>구(區) 내부 이동이 절대적</b>이다. 남구가 하루 약 9.3만(표본) 통행으로 최대 생활권 허브이며, 중구·동구·북구·울주가 각자 권역 내부 통행을 형성한다. 구 간 이동은 <b>울주→남구(약 1.1만)·중구↔남구(약 1만)</b> 축이 두드러진다 — 외곽(울주 범서)·중구에서 남구(삼산·신정) 도심으로 향하는 방향성이다.</p>
+<figure><img src="report_figs/fig_od.png" alt="구군 OD"><figcaption>구군 간 통행 OD(천 명). 대각선(구 내부)이 지배적이며 남구가 최대 허브.</figcaption></figure>
+<figure><img src="report_figs/fig_map_od.png" alt="OD 방향선"><figcaption>구군 중심 간 통행 방향선(선 굵기=통행량). 외곽·중구 → 남구 유입 축이 선명.</figcaption></figure>
+<p>이 구조에서 폐지 3노선은 모두 <b>외곽 생활권과 도심(삼산·태화강역)·고용지(동구 현대)를 직결</b>하던 축으로, 환승 체계로 대체되며 불편이 집중된 지점과 정확히 겹친다.</p>
+
+<h3>1-보강. 가설 검증 — "마을버스로 환승해 지역이동" 때문에 구내 통행이 부풀려진 것인가?</h3>
+<p>제기된 가설: 시민이 마을버스(구내 이동)로 간선 정류장까지 간 뒤 <b>환승해 지역이동</b>하므로, 구내 통행이 과대 집계됐을 수 있다. 보유 데이터로 점검한 결과는 <b>가설과 반대 방향</b>이다.</p>
+<figure><img src="report_figs/fig_villr.png" alt="유형별 환승율·구내비율"><figcaption>버스 유형별 환승율과 구내 통행 비율.</figcaption></figure>
+<ul>
+<li><b>마을버스 환승율은 3.3%로 오히려 낮다</b>(일반 시내버스 5.1%, 지선 4.9%보다 낮음). 가설대로라면 마을버스 이용 후 환승이 잦아 환승율이 높아야 하지만 그렇지 않다.</li>
+<li><b>마을버스 통행의 96.3%가 구내에서 완결</b>된다 — 대부분 환승 없이 같은 구 안에서 끝난다.</li>
+<li><b>마을버스를 제외해도 구내 통행 비중은 75.6% → 74.5%로 거의 변하지 않는다</b>(마을버스는 전체 통행의 4.8%에 불과).</li>
+</ul>
+<p>따라서 높은 구내 통행 비중은 <b>마을버스에 의한 착시가 아니라</b>, 구내 통행이 74.6%인 <b>일반 시내버스가 만든 실제 도시 구조</b>다. 지역간(구간) 이동의 실제 주력은 <b>좌석버스</b>(구내 비중 44%, 즉 절반 이상이 구간 통행)와 리무진이다. <span class="muted">단, 카드는 1회 승차(leg) 단위라 "마을→간선 환승 체인"을 직접 추적하지는 못하며, trnf_cnt 기반 간접 검증이다.</span></p>
+
+<h3>1-보강. 그렇다면 환승은 실제로 어디서 많이 일어나는가?</h3>
+<p>마을버스가 환승 피더가 아니라면, 실제 환승은 어느 노선·어느 지점에서 일어나는지 노선·정류장별로 집계했다.</p>
+<figure><img src="report_figs/fig_transfer.png" alt="환승 많은 노선·거점"><figcaption>환승율 높은 노선 Top10(좌)과 환승이 몰리는 정류장 Top10(우).</figcaption></figure>
+<ul>
+<li><b>환승율이 높은 노선은 모두 외곽 차고지 기점 간선</b>이다 — 472(9.8%, 율리↔농소), 714(9.0%, 명촌↔농소), 215·246·213(농소 기점) 등. 외곽 주거지(농소·율리·덕하)에서 도심으로 가려면 도심 결절점에서 한 번 갈아타야 하는 구조다. 즉 <b>실제 '환승 연결' 역할은 마을버스가 아니라 이들 외곽 간선</b>이 한다.</li>
+<li><b>환승이 가장 몰리는 정류장은 공업탑(약 2,700명)으로 압도적</b>이고, 신복로터리(신복교차로, 약 1,160명)·신정시장·시청앞·시외터미널이 뒤를 잇는다. 공업탑은 남구 도심의 <b>최대 환승 허브</b>, 신복로터리는 <b>울주·범서 방면 환승 관문</b>이다.</li>
+</ul>
+<p>이 결과는 재도입 검토와 직접 맞물린다.</p>
+<ul>
+<li><b>신복로터리</b>는 범서·구영 주민의 환승 관문인데, 재도입 <b>307번이 바로 신복로터리를 지나 천상→삼산을 직결</b>한다 → 지금 신복에서 갈아타던 통행을 한 번에 연결해 환승을 줄인다.</li>
+<li>환승량 절대값 상위에는 <b>동구계 노선(134·114·115·124)</b>이 크게 잡히는데, 이들은 폐지된 <b>123·126이 잇던 동구 연결을 대체 운행</b> 중이다 → 직결 123·126 재도입은 이 노선들의 환승 부담을 덜어준다.</li>
+</ul>
+<p>정리하면, <b>"환승이 몰리는 노선·거점"과 "재도입 3노선이 직결로 잇는 축"이 상당 부분 겹친다</b> — 재도입이 환승을 해소한다는 Q3 결론을 노선·거점 차원에서 다시 확인한다.</p>
+<div class="box easy"><h4>💡 쉽게 말하면</h4>
+<p style="margin:6px 0 0">환승이 많은 곳은 마을버스가 아니라, <b>외곽(농소·울주)에서 도심으로 갈 때 공업탑·신복로터리에서 갈아타는 지점</b>입니다. 재도입 <b>307번은 신복로터리를, 123·126번은 동구</b>를 한 번에 이어줘서, 바로 그 갈아타기를 줄여 줍니다.</p></div>
+
+<h3>1-보강. 환승 거점에서 — 어디서 와서, 환승 후 어디로 가나</h3>
+<p>거점별로 <b>환승 직전 도착 노선</b>과 <b>환승 후 목적지</b>를 집계했다. <span class="muted">(카드에 개인 식별자가 없어 한 사람의 '탄 노선→갈아탄 노선'을 1:1로 잇지는 못하며, 거점 단위의 도착/출발 분포로 본다.)</span></p>
+<figure><img src="report_figs/fig_transfer_flow.png" alt="환승 거점 흐름"><figcaption>공업탑·신복로터리의 도착(환승 직전) 노선과 환승 후 목적지 구.</figcaption></figure>
+<ul>
+<li><b>공업탑</b> — 215·134·115 등 여러 방면 노선으로 도착해, 환승 후 <b>남구(1,858)로 가는 통행이 압도적</b>이고 울주(450)가 그다음이다. 도심 내부 재분배 + 울주 방면 갈아타기가 함께 일어나는 최대 결절점.</li>
+<li><b>신복로터리</b> — 134·734·남구51·124로 도착해 환승 후 <b>남구(662)·울주(210)</b>로 향한다. <b>울주·범서 방면 관문</b>임이 데이터로 드러난다.</li>
+</ul>
+<p><b>재도입 연관</b>: 신복로터리 환승의 다수가 남구·울주행인데, <b>307번(천상↔삼산, 신복로터리 경유)</b>이 이를 직결로 흡수한다. 공업탑·신복에서 도착 노선으로 잡히는 <b>124·134 등 동구계 노선</b>은 123·126 직결 재도입으로 환승을 줄일 수 있다. 전체 거점·노선 표는 함께 제공하는 <b>환승거점_분석 CSV</b>에서 확인할 수 있다.</p>
+
+<h3>1-보강. 마을버스 제외 지역간 방향성 + 시간축</h3>
+<p>마을버스를 제외한 간선 기준으로 지역간 이동은 <b>출퇴근에 따라 방향이 반전</b>된다. 오전에는 외곽·타 구에서 <b>남구(도심)로 유입</b>(8시에 가장 몰림), 오후에는 <b>남구에서 외곽으로 유출</b>(17시에 가장 몰림)된다.</p>
+<figure><img src="report_figs/fig_dir_time.png" alt="남구 유입유출 시간"><figcaption>시간대별 남구 유입·유출(마을 제외) — 오전 유입·오후 유출의 통근 반전.</figcaption></figure>
+<figure><img src="report_figs/fig_od_ampm.png" alt="AM/PM OD"><figcaption>오전·오후 이용이 몰리는 시간대의 구간 통행(구내 제외). 오전 울주→남구(약 2,900) 등 도심 유입, 오후 역방향 유출.</figcaption></figure>
+<div class="box"><h4>📊 이 블록 차트(히트맵) 읽는 법 — 두 그림이 왜 비슷해 보이나</h4>
+<p style="margin:6px 0 0"><b>가로=도착 구, 세로=출발 구</b>이고, 칸의 밝기·숫자가 그 방향 통행량(천 명)입니다(같은 구끼리=대각선은 제외). <b>오전·오후 그림이 비슷해 보이는 건 자연스러운 현상</b>입니다 — 통근은 아침·저녁 모두 양방향으로 일어나고, 큰 칸마다 '남구'가 껴 있어 두 시점 모두 <b>남구가 들어간 줄이 밝게</b> 켜지기 때문입니다. 그래서 <b>절대 밝기만으로는 방향 반전이 잘 안 보입니다.</b></p>
+<p style="margin:8px 0 0">반전을 보려면 <b>① 같은 칸을 오전↔오후로 직접 비교</b>하거나(예: 울주→남구 오전 2,915 vs 오후 1,899), <b>② 아래 '오전−오후 차이' 그림</b>을 보면 됩니다.</p></div>
+<figure><img src="report_figs/fig_od_diff.png" alt="오전-오후 차이"><figcaption>오전 − 오후 통행 차이. <b>빨강=아침에 더 강한 방향(유입), 파랑=저녁에 더 강한 방향(유출)</b>.</figcaption></figure>
+<p>차이로 보면 반전이 또렷하다. <b>'남구로 들어오는' 열은 전부 빨강</b>(아침 유입) — 울주→남구 <b>+1,016</b>, 중구→남구 +553, 북구→남구 +357. 반대로 <b>'남구에서 나가는' 행은 전부 파랑</b>(저녁 유출) — 남구→북구 −293, 남구→울주 −238, 남구→중구 −228. 즉 "<b>아침엔 외곽→남구, 저녁엔 남구→외곽</b>"이 한눈에 드러난다. 가장 강한 아침 유입축은 <b>울주(범서)→남구</b>이며, 재도입 <b>307번이 바로 이 축</b>이다.</p>
+<p>두 시점을 비교하면 <b>출발–도착 구가 시간에 따라 거의 거울처럼 뒤집힌다</b>. 오전(7~9시)에는 울주→남구(약 2,900), 중구→남구, 북구→남구처럼 <b>외곽·주변 구에서 남구(삼산·신정 업무·상업지)로 향하는 칸이 진하게</b> 켜지고, 오후(17~19시)에는 같은 칸들이 옅어지는 대신 <b>남구→울주(약 1,240)·남구→중구 등 반대 방향 칸이 살아난다</b>. 통근·통학이 만드는 전형적인 <b>아침 도심 집중 / 저녁 외곽 분산</b> 구조다.</p>
+<p>한 가지 특징은 <b>오전 유입이 오후 유출보다 더 뾰족하다</b>는 점이다(울주→남구 오전 2,900 vs 남구→울주 오후 1,240). 출근·등교는 시작 시각이 비슷해 짧은 시간창에 몰리는 반면, 퇴근·하교는 종료 시각이 흩어져 오후 내내 완만하게 빠져나가기 때문이다. 여기에 좌석버스로 대체된 일부 구간은 오후 입석 불가로 한 번에 태우지 못해 기록상 유출이 더 여러 시간대로 분산돼 보이는 영향도 있다.</p>
+<p>폐지 3노선은 이 <b>외곽→도심 유입(오전)·도심→외곽 유출(오후)</b> 축 위에 정확히 놓여 있다.</p>
+<ul>
+<li><b>307(범서 천상→남구 삼산)</b> — 오전 유입 축의 핵심. 울주(범서)→남구 통근을 직결하며, 흡수 수요도 오전 8시(306)·오후 16시(384) 두 시간대에 집중된다.</li>
+<li><b>123(동구 현대↔범서 천상)</b> — 동구 고용지(현대중공업·현대차)와 천상·구영을 잇는 출퇴근 축. 오전 6시·오후 17시에 수요가 선다(생산직 교대·통근 시간대).</li>
+<li><b>126(동구 방어진↔남구·울주 덕하)</b> — 동구·수암에서 삼산(태화강역)으로의 유입 축. 통행량은 작지만 좌석버스 대체로 이용이 몰리는 시간대 무정차 불편이 집중된 구간이다.</li>
+</ul>
+<div class="box"><h4>정책 시사점 — 이용이 몰리는 시간대 방향 집중 배차</h4>
+<p>방향성이 시간에 따라 뚜렷이 갈리므로, 재도입 시 <b>양방향 균등 배차보다 이용이 몰리는 방향에 차량을 집중</b>하는 편이 효율적이다. 즉 <b>오전엔 도심(남구·삼산) 방향, 오후엔 외곽 방향</b>으로 운행을 더 배치하면 같은 대수로 그 시간대 혼잡을 더 줄일 수 있다. 특히 307은 오전 범서→삼산 유입이 핵심이므로 오전 도심방향 증차를 우선 고려할 만하다.</p></div>
+
+<div class="box easy"><h4>💡 쉽게 말하면</h4>
+<p style="margin:6px 0 0">울산 사람들은 대부분 <b>자기 동네(구) 안에서</b> 버스를 탑니다. 아침엔 외곽(범서)·중구·북구에서 <b>남구(삼산) 도심으로 우르르 몰려가고</b>, 저녁엔 반대로 흩어집니다. 폐지된 3노선은 바로 이 <b>"외곽↔도심", "동구 직장↔주거지"를 한 번에 잇던 길</b>이라, 없어지니 갈아타는 불편이 커진 겁니다. ("동네 마을버스 때문에 구내 통행이 부풀려진 것 아니냐"는 의심도 확인했는데, 마을버스는 대부분 동네 안에서만 쓰여서 그게 아니었습니다.)</p></div>
+
+<h2><span class="n">2</span>시간대별 수요 흐름</h2>
+<p>수요는 <b>오전 8시·오후 16~18시</b> 출퇴근 시간대에 집중된다. 재도입 노선의 흡수 가능 통행도 동일하게 그 시간대에 몰려, 이용이 몰리는 시간대 혼잡 완화 목적과 부합한다.</p>
+<figure><img src="report_figs/fig_hourly.png" alt="시간대별 수요"><figcaption>시간대별 승차 수요 — 오전 8시, 오후 16시 두 차례 이용이 몰린다.</figcaption></figure>
+<figure><img src="report_figs/fig_newdemand.png" alt="재도입 시간대 수요"><figcaption>재도입 3노선이 흡수 가능한 통행의 시간대 분포(307번이 대부분, 이용이 몰리는 시간대 집중).</figcaption></figure>
+
+<h2><span class="n">3</span>폐지 3노선 재도입 분석</h2>
+<h3>3-1. 노선 연결성 (기사 주장 검증)</h3>
+<ul>
+<li><b>123번</b>(동구 꽃바위↔범서 천상중): 경로에 현대중공업·현대자동차정문·현대출고사무소와 천상·구영(현대2·3차아파트)이 모두 포함 → "천상·구영 ↔ 동구 현대 출퇴근" 주장 <b>일치</b>.</li>
+<li><b>126번</b>(동구 방어진↔울주 덕하): 경로에 수암시장·선암동과 태화강역(삼산) 포함 → "수암·야음 ↔ 삼산 접근성" 주장 <b>일치</b>.</li>
+<li><b>307번</b>(범서 천상↔남구 삼산): 천상~울산대~공업탑~삼산을 직결 → 외곽→도심 최대 수요축.</li>
+</ul>
+<h3>3-2. 흡수 수요와 투입 효율</h3>
+<table>
+<tr><th>노선</th><th class="r">하루 흡수 가능 통행(표본)</th><th class="r">오후 몰림</th><th class="r">인가대수</th><th class="r">효율(명/대)</th></tr>
+<tr><td><b>307</b></td><td class="r">3,997</td><td class="r">16시 384</td><td class="r">12</td><td class="r key">333</td></tr>
+<tr><td>123</td><td class="r">602</td><td class="r">17시 61</td><td class="r">8</td><td class="r">75</td></tr>
+<tr><td>126</td><td class="r">186</td><td class="r">16시 19</td><td class="r">8</td><td class="r">23</td></tr>
+</table>
+<p class="muted">※ 카드 표본·매칭 기준에 따라 절대값은 달라진다. 노선 간 상대 크기·시간대 패턴 위주로 해석할 것. (재도입 시뮬레이션 화면의 값)</p>
+<figure><img src="report_figs/fig_map_congestion.png" alt="혼잡 지도"><figcaption>08시 정류장 혼잡(초록~빨강) + 인구밀도 배경 + 재도입 3노선(점선). 도심·외곽 축에 혼잡이 집중.</figcaption></figure>
+
+<div class="box easy"><h4>💡 쉽게 말하면</h4>
+<p style="margin:6px 0 0">셋 중 <b>307번이 압도적으로 손님이 많습니다.</b> 버스 한 대가 끌어오는 손님이 307번은 333명, 123번은 75명, 126번은 23명꼴입니다. 즉 <b>같은 예산으로 효과를 보려면 307번부터 살리는 게 유리</b>합니다. 126번은 손님 수는 적지만, 대체된 좌석버스가 입석을 못 태워 출퇴근 무정차 불편이 큰 점은 따로 고려할 필요가 있습니다.</p></div>
+
+<h2><span class="n">4</span>핵심 질문 3가지 검토</h2>
+
+<div class="box q"><h4>Q1. 기존 노선의 이용률 감소는 어떻게 볼 것인가?</h4>
+<p>재도입으로 이용이 옮겨가는 기존 노선은 <b>134·124·482·743·114·713·452·울주09</b> 등 도심·외곽 간선에 집중된다. 전체 통행(28.9만) 대비 전환 규모는 작아 대부분 노선엔 영향이 미미하고, <b>특정 혼잡 간선에서만</b> 이용이 줄어든다.</p>
+<p>중요한 점은 이들 노선이 <b>이미 이용이 몰리는 시간대에 혼잡</b>하다는 것이다(124 그 시간대 재차 58, 울주09 57, 713 49 — 시내버스 정원 45~50 초과). 따라서 이용 감소는 노선의 손실이라기보다 <span class="key">과포화 간선의 혼잡을 덜어주는 분산 효과</span>로 해석된다.</p>
+<figure style="margin:14px 0 0"><img src="report_figs/fig_q1.png" alt="기존 노선 영향"><figcaption>재도입 시 이용 감소가 큰 기존 노선과 각 노선의 국토부 이용 집중 시간대 재차.</figcaption></figure>
+<p class="muted" style="margin-top:10px">💡 <b>쉽게 말하면:</b> 새 노선에 손님을 내주는 기존 노선들은 원래도 출퇴근에 꽉 차서 터지던 노선입니다. 손님이 좀 빠지는 건 손해가 아니라 <b>붐비던 버스가 한결 여유로워지는 좋은 분산</b>입니다.</p>
+</div>
+
+<div class="box q"><h4>Q2. 기존 버스 재차율이 높아 실제로 노선 투입이 필요한가?</h4>
+<p>그렇다. 위 간선들의 이용이 몰리는 시간대 차내 재차는 <b>49~58명</b>으로 시내버스 정원(45~50)을 넘어선다. 즉 해당 코리더는 현 체계에서 이미 만차에 가깝다. 좌석버스로 대체된 구간은 <b>입석 불가</b>로 그 시간대 수용력이 더 낮아(정원=좌석 40) 무정차 민원으로 이어진다. <span class="key">단순 수요 재분배가 아니라 절대 공급 부족 구간</span>이 존재하므로 증차를 동반한 재도입은 혼잡 완화에 기여한다.</p>
+<p class="muted" style="margin-top:10px">💡 <b>쉽게 말하면:</b> 그 구간 버스들은 이미 정원을 넘겨 태우고 있어, 손님을 나눠 받을 곳이 없습니다. 그래서 <b>차를 늘려(증차) 길을 하나 더 터주는</b> 재도입이 실제로 도움이 됩니다.</p>
+</div>
+
+<div class="box q"><h4>Q3. 신규 노선 도입으로 환승율이 내려가 이용편의가 증가하는가?</h4>
+<p>그렇다. 전체 통행 중 현재 환승(trnf≥1)은 4.8%인데, <b>재도입 노선이 직결로 흡수하는 통행은 17.7%가 현재 환승 통행</b>이다(약 3.6배). 즉 신규 직결 노선은 <span class="key">환승으로 불편을 겪던 통행을 집중적으로 해소</span>해, 환승 횟수·대기시간을 줄이고 이용편의를 높인다. 이는 "개편으로 환승 체계가 강화됐다"는 행정 설명의 이면(환승 부담 증가)을 정량적으로 보여준다.</p>
+<figure style="margin:14px 0 0"><img src="report_figs/fig_q3.png" alt="환승 해소"><figcaption>전체 통행 vs 재도입 전환후보의 현재 환승 비율 — 직결 신설의 환승 해소 효과.</figcaption></figure>
+<p class="muted" style="margin-top:10px">💡 <b>쉽게 말하면:</b> 새 직결 노선이 데려가는 손님 중에는 <b>지금 버스를 갈아타며 불편하게 다니는 사람의 비중이 평소보다 3배 이상</b> 높습니다. 즉 갈아타기 없이 한 번에 갈 수 있게 돼 그만큼 편해진다는 뜻입니다.</p>
+</div>
+
+<h2><span class="n">5</span>해결책 검토 (기사 대비)</h2>
+<div class="box easy"><h4>💡 한 줄 정리</h4><p style="margin:6px 0 0">효과가 가장 큰 <b>307번을 1순위로 살리고</b>, 123·126번은 출퇴근 시간대 위주로 차차 늘리는 게 예산 대비 효과가 좋습니다. 좌석버스로 대체된 구간(특히 126)은 입석을 못 태워 불편하니 <b>일반버스 재도입</b>이 그 문제를 바로 풉니다.</p></div>
+<ul>
+<li><b>우선순위</b> — 통행량·효율로는 <span class="key">307번이 압도적 1순위</span>(대당 333명), 123번 2순위, 126번은 효율이 낮다(대당 23명). 다만 126은 좌석버스 입석 불가로 인한 이용이 몰리는 시간대 불편이 별도로 크므로, <b>"통행량(307·123) + 혼잡시간 불편(126)"</b>을 함께 고려한 차등 투입이 합리적이다.</li>
+<li><b>증차 15대 배분</b> — 효율 기준으로 <b>307에 우선 배분</b>하고, 123은 출퇴근 시간대 위주 부분 투입, 126은 이용이 몰리는 시간대 한정·소수 투입으로 단계화하면 예산 대비 체감 효과를 높일 수 있다.</li>
+<li><b>좌석버스 대체 한계</b> — 입석 불가(정원=좌석)로 이용이 몰리는 시간대 무정차가 구조적이다. 재도입 일반버스는 입석 수용으로 이 문제를 직접 해소한다.</li>
+<li><b>단계적 접근</b> — 1단계 307 전구간 + 123·126 이용이 몰리는 시간대, 2단계 수요 모니터링 후 확대. 공영제는 장기 과제로 분리한다는 시의 방침과 부합한다.</li>
+</ul>
+
+<h2><span class="n">6</span>한계</h2>
+<div class="box warn">
+<p>본 분석은 <b>단일일자(2026-04-07)·교통카드 합성데이터(표본)</b> 기반이다. 절대 인원·만차 편수는 표본이라 낮게 나오므로 <b>노선 간 우선순위·시간대·방향성 패턴</b> 해석에 사용해야 한다. 전환율(50%)·정원·배차·도보반경(300m)은 가정값이며, 유발수요·환승선택모형·통행배정은 미반영이다. 예산·차량(수소버스)·시의회 일정 등 행정 변수는 데이터 범위 밖이다.</p>
+</div>
+
+<h2><span class="n">7</span>관련 인터랙티브 화면</h2>
+<div class="links">
+<a href="ulsan_route_sim2.html" target="_blank">재도입 시뮬레이션 ↗</a>
+<a href="ulsan_route_buses.html" target="_blank">버스 운행 복원 ↗</a>
+<a href="ulsan_route_flow.html" target="_blank">혼잡 흐름 ↗</a>
+<a href="ulsan_od_20260407.html" target="_blank">OD 이동흐름 ↗</a>
+<a href="index.html" target="_blank">전체 허브 ↗</a>
+</div>
+
+<footer>
+데이터: 한국교통안전공단 교통카드 합성데이터 · 국가대중교통DB(BIS) · 국토교통부 노선별 차내 재차인원/혼잡도 · 통계청 SGIS 인구.<br>
+도표는 동일 데이터로 렌더한 분석 figure·지도 스냅샷이며, 라이브 인터랙티브 화면은 위 링크에서 확인할 수 있다.
+</footer>
+</div></body></html>

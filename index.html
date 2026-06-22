@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>울산 버스 데이터 시각화 허브</title>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#0a1430;--bg2:#0d1530;--card:#121d3f;--card2:#16224a;--ink:#eaf0ff;--sub:#9fb0d8;--line:#ffffff1f;--accent:#5a8bff;--gold:#ffd54f}
+html,body{margin:0;background:linear-gradient(160deg,#0a1430,#0c1838 60%,#0a1226);color:var(--ink);font-family:'Apple SD Gothic Neo',system-ui,sans-serif;min-height:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:34px 22px 70px}
+header h1{font-size:27px;margin:0 0 6px}
+header p{color:var(--sub);font-size:14px;margin:3px 0;line-height:1.6}
+.tag{display:inline-block;background:#3a7bd522;border:1px solid #42a5f5;border-radius:6px;padding:2px 9px;font-size:11.5px;margin-top:8px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.nav a{background:#16224a;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--sub);transition:.15s}
+.nav a:hover{background:#22305f;color:#fff}
+section{margin-top:30px}
+section h2{font-size:16px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
+section h2 .bar{width:4px;height:18px;background:var(--gold);border-radius:2px}
+section .desc{color:var(--sub);font-size:12.5px;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
+.card{background:linear-gradient(165deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;padding:15px 16px;cursor:pointer;position:relative;transition:.16s;overflow:hidden}
+.card:hover{transform:translateY(-3px);border-color:#5a8bff88;box-shadow:0 10px 26px #0006}
+.card .em{font-size:20px}
+.card h3{font-size:14.5px;margin:8px 0 5px;line-height:1.35}
+.card p{color:var(--sub);font-size:12px;line-height:1.55;margin:0;min-height:34px}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:11px;font-size:11px;color:#7f90bb}
+.card .open{color:var(--accent);font-weight:600}
+.card.feat{border-color:#ffd54f55}
+.badge{position:absolute;top:11px;right:11px;background:var(--gold);color:#10131c;font-size:10px;font-weight:700;border-radius:6px;padding:2px 7px}
+footer{margin-top:46px;color:#6c7aa6;font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:18px}
+/* viewer overlay */
+#ov{position:fixed;inset:0;background:#060a18ee;backdrop-filter:blur(3px);display:none;flex-direction:column;z-index:50}
+#ov.on{display:flex}
+#ovbar{display:flex;align-items:center;gap:12px;padding:9px 14px;background:#0d1530;border-bottom:1px solid var(--line)}
+#ovbar b{font-size:14px}#ovbar .sp{flex:1}
+#ovbar a,#ovbar button{background:#22305a;color:#eaf0ff;border:1px solid var(--line);border-radius:8px;padding:6px 13px;font-size:13px;cursor:pointer}
+#ovbar button#cl{background:#c0392b;border-color:#e25a4a}
+#ovf{flex:1;border:0;width:100%;background:#0a1430}
+</style></head><body>
+<div class="wrap">
+<header>
+<h1>🚌 울산 버스 데이터 시각화 허브</h1>
+<p>교통카드 합성데이터 · BIS 실노선 · 국토부 혼잡도 · SGIS 인구를 결합한 울산 시내버스 분석 모음.</p>
+<p>모든 화면은 <b>2026-04-07(화)</b> 기준이며, 카드를 누르면 이 페이지 안에서 바로 열립니다.</p>
+<span class="tag">실데이터 2026-04-07</span>
+</header>
+
+<div class="nav">
+<a href="#sim">핵심 시뮬레이션</a><a href="#flow">시간·주야 흐름</a><a href="#analysis">수요·노선 분석</a><a href="#base">OD·인구 배경</a><a href="#ref">참고</a>
+</div>
+
+<section id="sim">
+<h2><span class="bar"></span>핵심 — 버스 운행·혼잡 시뮬레이션</h2>
+<p class="desc">카드로 버스 운행을 복원하고, 폐지 노선 재도입 효과까지 검토하는 최신 결과물.</p>
+<div class="grid" data-cards="sim"></div>
+</section>
+
+<section id="flow">
+<h2><span class="bar"></span>시간·주야 흐름</h2>
+<p class="desc">하루 시간축을 따라 승객·버스가 흐르는 애니메이션.</p>
+<div class="grid" data-cards="flow"></div>
+</section>
+
+<section id="analysis">
+<h2><span class="bar"></span>수요·노선 분석</h2>
+<p class="desc">노선·정류장·이용자유형·지역별 수요와 개선 포인트.</p>
+<div class="grid" data-cards="analysis"></div>
+</section>
+
+<section id="base">
+<h2><span class="bar"></span>OD·인구 배경</h2>
+<p class="desc">통행 OD와 인구밀도 등 기반 데이터 지도.</p>
+<div class="grid" data-cards="base"></div>
+</section>
+
+<section id="ref">
+<h2><span class="bar"></span>참고</h2>
+<div class="grid" data-cards="ref"></div>
+</section>
+
+<footer>
+데이터: 한국교통안전공단 교통카드 합성데이터 · 국가대중교통DB(BIS) 실노선·정류소 · 국토교통부 노선별 차내 재차인원/혼잡도 · 통계청 SGIS 인구.<br>
+시뮬레이션 수치는 단일일자·표본·가정값 기반 추정으로 절대량이 아닌 노선 간 우선순위·시간대 패턴 비교용입니다.
+</footer>
+</div>
+
+<div id="ov"><div id="ovbar"><b id="ovt"></b><span class="sp"></span><a id="ovnew" target="_blank">↗ 새 탭</a><button id="cl">✕ 닫기</button></div><iframe id="ovf"></iframe></div>
+
+<script>
+const DATA={
+ sim:[
+  {f:"ulsan_재도입_검토보고서.html",e:"📑",t:"재도입 검토 보고서",d:"지역특징·이동 방향성·시간대 흐름 + 기존노선 영향·투입 필요성·환승 해소 + 해결책 검토를 종합한 분석 보고서.",b:"보고서"},
+  {f:"ulsan_route_sim2.html",e:"🧪",t:"폐지노선 재도입 시뮬레이션",d:"123·126·307 재도입 시 혼잡 완화·시간대별 전환·투입 효율(명/대)을 토글·슬라이더로 검토.",b:"최신"},
+  {f:"ulsan_route_buses.html",e:"🚍",t:"버스 운행 복원",d:"카드 기록으로 실제 버스 운행을 복원. 상행 ■ / 하행 ▲ 양방향, 차내 재차 기반 크기."},
+  {f:"ulsan_route_flow.html",e:"🌡️",t:"혼잡 흐름",d:"정류장 혼잡 4색(초록~빨강) + 버스 유형색, 시간이 흐르며 만차 정류장이 이동."},
+  {f:"ulsan_route_sim.html",e:"🟥",t:"만차 시뮬레이션",d:"시간대별 만차 정류장·만차 버스 목록. 정원 대비 차내 재차로 만차 판정."},
+  {f:"ulsan_route_cluster.html",e:"🟢",t:"승객 군집 흐름",d:"가까운 같은 노선 승객을 묶어 버스처럼 표시. 줌인하면 개별로 분리."}
+ ],
+ flow:[
+  {f:"ulsan_daynight_flow.html",e:"🌗",t:"주야 흐름",d:"밤=불빛·낮=명암으로 전환되는 버스·승객 흐름 애니메이션."},
+  {f:"ulsan_time_anim.html",e:"⏱️",t:"시간축 승객 이동",d:"하루 승객 OD 이동을 시간축으로 재생."}
+ ],
+ analysis:[
+  {f:"ulsan_demand_dashboard.html",e:"📊",t:"수요 분석 대시보드",d:"노선·시간대·이용자유형별 수요 종합 대시보드."},
+  {f:"ulsan_route_improvement.html",e:"🛠️",t:"노선 개선 분석",d:"혼잡·수요 기반 개선 후보 노선 진단."},
+  {f:"ulsan_top_routes.html",e:"🏆",t:"이용량·노선목록",d:"이용량 상위 노선과 전체 노선 목록."},
+  {f:"ulsan_stop_boarding.html",e:"🚏",t:"노선별 탑승 많은 정류장",d:"각 노선에서 승차가 집중되는 정류장."},
+  {f:"ulsan_anchor_stops.html",e:"📍",t:"거점형 정류장",d:"인구 대비 이용이 많은 거점 정류장."},
+  {f:"ulsan_usertype_demand.html",e:"👥",t:"이용자유형별 수요",d:"일반·어린이·청소년·경로 등 유형별 정류장 수요."},
+  {f:"ulsan_donggu.html",e:"🧭",t:"동구 집중 분석",d:"동구 발·내부·시내행 이동과 배차 진단."}
+ ],
+ base:[
+  {f:"ulsan_od_20260407.html",e:"🔀",t:"카드 OD 이동흐름",d:"승차→하차 통행을 욕망선으로 표시한 실데이터 OD 지도."},
+  {f:"ulsan_combined_v4.html",e:"🗺️",t:"인구밀도+노선+OD 통합",d:"100m 인구격자 위에 버스 노선도와 OD를 겹친 통합도."},
+  {f:"ulsan_population_bg.html",e:"🏙️",t:"인구밀도(읍면동)",d:"SGIS 읍면동 인구밀도 배경."}
+ ],
+ ref:[
+  {f:"ulsan_용어설명.html",e:"ℹ️",t:"용어 설명",d:"재차·배차·첨두·OD·혼잡도·인구격자·이용자유형 코드 등."}
+ ]
+};
+function card(c){return `<div class="card ${c.b?'feat':''}" data-f="${c.f}" data-t="${c.t}">${c.b?`<span class="badge">${c.b}</span>`:''}<div class="em">${c.e}</div><h3>${c.t}</h3><p>${c.d}</p><div class="meta"><span class="open">화면 열기 →</span><span>${c.f.split('.')[0].replace('ulsan_','')}</span></div></div>`;}
+for(const k in DATA){const el=document.querySelector(`[data-cards="${k}"]`);if(el)el.innerHTML=DATA[k].map(card).join('');}
+const ov=document.getElementById('ov'),ovf=document.getElementById('ovf'),ovt=document.getElementById('ovt'),ovnew=document.getElementById('ovnew');
+function openV(f,t){ovt.textContent=t;ovf.src=f;ovnew.href=f;ov.classList.add('on');document.body.style.overflow='hidden';}
+function closeV(){ov.classList.remove('on');ovf.src='about:blank';document.body.style.overflow='';}
+document.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openV(c.dataset.f,c.dataset.t);});
+document.getElementById('cl').onclick=closeV;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeV();});
+ov.addEventListener('click',e=>{if(e.target===ov)closeV();});
+</script>
+</body></html>

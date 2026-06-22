@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>울산 버스 시각화 — 용어 설명</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#e9eefc;font-family:'Apple SD Gothic Neo',system-ui,sans-serif;line-height:1.65}
+.wrap{max-width:860px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:#9fb2dd;font-size:13px;margin-bottom:24px}
+h2{font-size:16px;margin:30px 0 10px;padding-bottom:6px;border-bottom:1px solid #ffffff22;color:#cfe0ff}
+.term{background:#121a30;border:1px solid #ffffff14;border-radius:12px;padding:14px 16px;margin:10px 0}
+.term .t{font-size:15px;font-weight:700;color:#ffd54f}
+.term .d{font-size:13.5px;margin-top:5px;color:#dde6fb}
+.term .f{font-size:12.5px;margin-top:6px;color:#9fb2dd}
+.term .f code{background:#0008;padding:1px 6px;border-radius:5px;color:#bfe6ff}
+.tags{margin-top:6px}.tags span{display:inline-block;font-size:11px;border-radius:6px;padding:2px 7px;margin-right:5px}
+.real{background:#13502f;color:#9bf3c2;border:1px solid #2aa17a}
+.est{background:#4a3a12;color:#ffe08a;border:1px solid #b8902f}
+.card{background:#3a7bd522;border:1px solid #42a5f5}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+td,th{border-bottom:1px solid #ffffff14;padding:5px 8px;text-align:left}th{color:#9fb2dd}
+.back{display:inline-block;margin-bottom:18px;color:#7fb4ff;text-decoration:none;font-size:13px}
+@media print{body{background:#fff;color:#000}.term{background:#f4f6fb;border-color:#ccc}}
+</style></head><body><div class="wrap">
+<h1>울산 버스 시각화 — 용어 설명</h1>
+<div class="sub">2026-04-07 데이터 기준 · 시각화에 쓰인 지표/용어 정리</div>
+
+<p><span class="tags"><span class="real">실측</span> 국토부 혼잡도 API 등 실제 측정값 &nbsp; <span class="est">추정</span> 교통카드 합성데이터로 계산한 근사값</span></p>
+
+<h2>이용·수요 지표</h2>
+
+<div class="term"><div class="t">정류장 승차 인원</div>
+<div class="d">특정 정류장에서 버스에 <b>탄</b> 사람 수. 교통카드 태그(승차) 기준이라 가장 신뢰도가 높습니다.</div>
+<div class="f">시각화의 점/원 크기·히트맵 색이 대체로 이 값입니다. <span class="tags"><span class="real">실측</span>(카드)</span></div></div>
+
+<div class="term"><div class="t">하차 인원 / OD(기종점)</div>
+<div class="d">버스에서 <b>내린</b> 사람 수, 그리고 "어디서 타서(승차) 어디서 내렸나(하차)"의 한 쌍을 <b>OD(Origin–Destination, 기종점)</b> 통행이라 합니다.</div>
+<div class="f">합성데이터는 하차의 일부가 추정 보간이라, OD 분석은 승하차가 모두 잡힌 통행(약 66%)만 사용합니다. <span class="tags"><span class="est">일부 추정</span></span></div></div>
+
+<div class="term"><div class="t">욕망선 (Desire Line)</div>
+<div class="d">실제 OD(출발→도착)를 <b>직선으로 이은 수요 흐름</b>. 도로/노선과 무관하게 "사람들이 실제로 가고 싶어 한 방향"을 보여줍니다. 굵을수록 통행량이 많습니다.</div></div>
+
+<div class="term"><div class="t">순유입 · 순유출</div>
+<div class="d">한 정류장·지역에서 <b>(하차 − 승차)</b>. 하차가 많으면 <b>순유입(도착지)</b>, 승차가 많으면 <b>순유출(출발지)</b>. 아침엔 주거지가 유출, 도심이 유입이고 저녁엔 반대로 뒤집힙니다.</div></div>
+
+<h2>운영 지표</h2>
+
+<div class="term"><div class="t">차내 재차인원 (재차)</div>
+<div class="d">어느 시점·구간에서 <b>버스 안에 타고 있는 승객 수</b>. 그 구간이 얼마나 붐비는지(혼잡도)를 나타냅니다. 승차 인원과 달리 "지금 차 안에 몇 명"인지를 뜻합니다.</div>
+<div class="f">국토부 노선별 혼잡도의 <code>cgst</code> 값 = 운행 1회차의 차내 재차인원. 경로선 색(파랑→빨강)이 이 값입니다. <span class="tags"><span class="real">실측</span></span></div></div>
+
+<div class="term"><div class="t">배차간격 (Headway)</div>
+<div class="d">같은 노선의 버스가 <b>연달아 오는 시간 간격(분)</b>. 10분 배차면 10분마다 한 대가 옵니다. 짧을수록 자주 와서 편리합니다.</div>
+<div class="f">현재는 혼잡도 데이터의 시간대별 운행 편수로 <code>60 ÷ 편수</code> 추정. (정확값은 운행시간표 API로 보강 가능) <span class="tags"><span class="est">추정</span></span></div></div>
+
+<div class="term"><div class="t">회전시간 (운행 1순환 소요)</div>
+<div class="d">버스가 노선 전 구간을 <b>한 바퀴(왕복) 도는 데 걸리는 시간</b>. 배차 대수·운행 계획의 기본이 됩니다.</div>
+<div class="f">현재 추정 = <code>총연장 ÷ 평균 운행속도(22km/h) × 왕복</code>. (정확값은 평균통행시간 API로 보강 가능) <span class="tags"><span class="est">추정</span></span></div></div>
+
+<div class="term"><div class="t">첨두 · 비첨두 · 첨두비</div>
+<div class="d"><b>첨두(peak)</b>=이용이 몰리는 출퇴근 시간대(대개 07~09, 17~19시), <b>비첨두</b>=그 외 한산한 시간. <b>첨두비</b> = 가장 붐비는 3시간 승차 ÷ 하루 평균 3시간치.</div>
+<div class="f">첨두비가 높을수록 출퇴근에 집중 → 첨두 증차/급행 검토. 1에 가까우면 종일 고른 수요. <span class="tags"><span class="est">카드</span></span></div></div>
+
+<div class="term"><div class="t">노선 혼잡도</div>
+<div class="d">차내 재차인원을 기준으로 한 노선·구간의 붐빔 정도. 높을수록 입석·혼잡이 심합니다.</div>
+<div class="f"><span class="tags"><span class="real">실측</span> 국토부 노선별 혼잡도</span></div></div>
+
+<h2>배경·분류</h2>
+
+<div class="term"><div class="t">인구밀도 격자 (100m)</div>
+<div class="d">국토지리정보원 <b>100m × 100m 격자</b>의 거주 인구(2024.10). 배경의 짙기(밤=불빛/낮=먹 명암 또는 초록 농담)가 인구 밀집도입니다.</div></div>
+
+<div class="term"><div class="t">인구 대비 이용 (거점·목적지형)</div>
+<div class="d"><b>승차 ÷ 인근 인구</b>. 주변에 사는 사람은 적은데 승차가 많은 곳 = 역·터미널·시장·학교·업무지구 같은 <b>목적지형 거점</b> 정류장입니다.</div></div>
+
+<div class="term"><div class="t">이용자유형 코드</div>
+<div class="d">교통카드 이용자 구분(국토부 표준 코드).</div>
+<table><tr><th>코드</th><th>구분</th><th>코드</th><th>구분</th></tr>
+<tr><td>01</td><td>일반</td><td>04</td><td>경로</td></tr>
+<tr><td>02</td><td>어린이</td><td>05</td><td>장애</td></tr>
+<tr><td>03</td><td>청소년</td><td>06</td><td>국가유공</td></tr></table>
+<div class="f">(07 외국인, 08 기타도 있으나 본 데이터엔 01~06만 수집)</div></div>
+
+<h2>데이터 출처·주의</h2>
+<div class="term card"><div class="d">
+· <b>교통카드 합성데이터</b>: 실제 이용을 통계적으로 가공·익명화한 자료. 승차는 신뢰도 높으나 하차 일부는 추정 보간이라 OD엔 한계가 있습니다.<br>
+· <b>국토부 노선별 혼잡도</b>: 차내 재차인원 실측 → 배차·혼잡 지표의 근거.<br>
+· <b>회전시간·배차간격</b>은 현재 추정값(운행시간표/평균통행시간 API로 정확화 예정).<br>
+· 일부 화면의 점은 성능을 위해 <b>표본</b>을 사용합니다(전수 아님).
+</div></div>
+
+</div></body></html>
